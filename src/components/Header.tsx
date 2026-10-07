@@ -25,7 +25,7 @@ export default function Header() {
         </Link>
         
         <nav className={`hidden lg:flex items-center gap-8 text-[15px] font-medium ${isScrolled ? "text-brand-dark" : "text-white drop-shadow-md"}`}>
-          <Link href="#services" className="hover:text-brand-primary transition-colors">Services</Link>
+          <Link href="/services" className="hover:text-brand-primary transition-colors">Services</Link>
           <Link href="#work" className="hover:text-brand-primary transition-colors">Our work</Link>
           <Link href="#certifications" className="hover:text-brand-primary transition-colors">Certifications</Link>
           <div className="relative group" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)}>
@@ -35,8 +35,8 @@ export default function Header() {
             {dropdownOpen && (
               <div className="absolute top-full left-0 mt-4 w-64 bg-white border border-gray-100 shadow-lg py-2 rounded-md z-50 text-brand-dark">
                 <Link href="#" className="block px-4 py-2 hover:bg-brand-grayBg hover:text-brand-primary">RoarTech’s capability statement</Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-brand-grayBg hover:text-brand-primary">INR hybrid multi-cloud</Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-brand-grayBg hover:text-brand-primary">Air Force multi-cloud integration</Link>
+                <Link href="/inr-hybrid-multi-cloud" className="block px-4 py-2 hover:bg-brand-grayBg hover:text-brand-primary">INR hybrid multi-cloud</Link>
+                <Link href="/air-force-multi-cloud-integration" className="block px-4 py-2 hover:bg-brand-grayBg hover:text-brand-primary">Air Force multi-cloud integration</Link>
               </div>
             )}
           </div>
@@ -56,14 +56,14 @@ export default function Header() {
 
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white px-4 py-4 flex flex-col gap-4 text-[15px] font-medium text-brand-dark shadow-lg absolute w-full top-full left-0">
-          <Link href="#services" className="hover:text-brand-primary">Services</Link>
+          <Link href="/services" className="hover:text-brand-primary">Services</Link>
           <Link href="#work" className="hover:text-brand-primary">Our work</Link>
           <Link href="#certifications" className="hover:text-brand-primary">Certifications</Link>
           <div className="font-semibold">Capability statement</div>
           <div className="pl-4 flex flex-col gap-3 border-l-2 border-gray-200 mt-1 text-[14px]">
              <Link href="#" className="hover:text-brand-primary">RoarTech’s capability statement</Link>
-             <Link href="#" className="hover:text-brand-primary">INR hybrid multi-cloud</Link>
-             <Link href="#" className="hover:text-brand-primary">Air Force multi-cloud integration</Link>
+             <Link href="/inr-hybrid-multi-cloud" className="hover:text-brand-primary">INR hybrid multi-cloud</Link>
+             <Link href="/air-force-multi-cloud-integration" className="hover:text-brand-primary">Air Force multi-cloud integration</Link>
           </div>
           <Link href="#careers" className="hover:text-brand-primary">Careers</Link>
           <Link href="#contact" className="mt-4 px-6 py-3 bg-brand-primary text-white text-center rounded-full font-semibold">Contact us</Link>
@@ -72,3 +72,4 @@ export default function Header() {
     </header>
   );
 }
+
