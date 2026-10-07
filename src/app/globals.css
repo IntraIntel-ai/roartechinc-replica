@@ -1,3 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #005a7e;
+  --color-brand-secondary: #002737;
+  --color-brand-light: #e2f3fa;
+  --color-brand-accent: #9ac93c;
+  --color-brand-accentHover: #689213;
+  --color-brand-lightAccent: #e8f7c9;
+  --color-brand-grayBg: #f7f7f7;
+  --color-brand-dark: #333333;
+  
+  --font-sans: var(--font-montserrat), sans-serif;
+}
