@@ -24,52 +24,31 @@ export default function Hero() {
   const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative w-full h-[50vh] md:h-[70vh] flex items-center justify-center bg-gray-900 overflow-hidden group">
-      {/* Background Images */}
+    <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center bg-gray-900 overflow-hidden group">
       {slides.map((slide, index) => (
-        <div key={slide.id} className={`absolute inset-0 transition-opacity duration-1000 ${index === current ? 'opacity-50' : 'opacity-0'}`}>
+        <div key={slide.id} className={`absolute inset-0 transition-opacity duration-1000 ${index === current ? 'opacity-60' : 'opacity-0'}`}>
           <Image src={slide.img} alt={`Slide ${index + 1}`} fill className="object-cover" priority={index === 0} />
         </div>
       ))}
       
-      {/* Static Overlay Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center mt-16">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
           Our Guarantee is Sustainability + Security + Governance
         </h1>
-        <p className="text-lg md:text-2xl text-gray-200 mb-8">
+        <p className="text-lg md:text-2xl text-gray-100 mb-10 font-medium drop-shadow-md">
           We are your Principal Technology Advisors.
         </p>
-        <Link href="#services" className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-colors">
+        <Link href="#services" className="px-8 py-4 bg-brand-primary text-white font-semibold rounded-full hover:bg-brand-secondary transition-colors text-[15px]">
           Know our services
         </Link>
       </div>
 
-      {/* Navigation Arrows */}
-      <button 
-        onClick={prevSlide}
-        className="absolute left-4 md:left-8 z-20 p-2 text-white/80 hover:text-white transition-opacity opacity-0 group-hover:opacity-100 focus:opacity-100"
-        aria-label="Previous"
-      >
-        <ChevronLeft size={48} strokeWidth={1} />
-      </button>
-      <button 
-        onClick={nextSlide}
-        className="absolute right-4 md:right-8 z-20 p-2 text-white/80 hover:text-white transition-opacity opacity-0 group-hover:opacity-100 focus:opacity-100"
-        aria-label="Next"
-      >
-        <ChevronRight size={48} strokeWidth={1} />
-      </button>
+      <button onClick={prevSlide} className="absolute left-4 md:left-8 z-20 p-2 text-white/80 hover:text-white transition-opacity opacity-0 group-hover:opacity-100"><ChevronLeft size={48} strokeWidth={1} /></button>
+      <button onClick={nextSlide} className="absolute right-4 md:right-8 z-20 p-2 text-white/80 hover:text-white transition-opacity opacity-0 group-hover:opacity-100"><ChevronRight size={48} strokeWidth={1} /></button>
 
-      {/* Pagination Bullets */}
       <div className="absolute bottom-6 flex gap-3 z-20">
         {slides.map((_, i) => (
-          <button 
-            key={i} 
-            onClick={() => setCurrent(i)} 
-            aria-label={`Go to slide ${i + 1}`}
-            className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${i === current ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} 
-          />
+          <button key={i} onClick={() => setCurrent(i)} className={`w-3 h-3 rounded-full transition-colors duration-300 ${i === current ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}`} />
         ))}
       </div>
     </section>

@@ -10,7 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          blue: "#1a73e8", // approximate original blue
+          primary: "#005a7e",
+          secondary: "#002737",
+          light: "#e2f3fa",
+          accent: "#9ac93c",
+          accentHover: "#689213",
+          lightAccent: "#e8f7c9",
+          grayBg: "#f7f7f7",
           dark: "#333333",
         }
       },

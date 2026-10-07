@@ -45,23 +45,23 @@ const cases = [
 
 export default function OurWork() {
   return (
-    <section className="py-20 px-6">
+    <section className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our work</h2>
-          <div className="w-16 h-1 bg-brand-blue mx-auto"></div>
+          <h2 className="text-3xl font-bold text-brand-dark mb-4">Our work</h2>
+          <div className="w-16 h-[3px] bg-brand-primary mx-auto"></div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-16">
           {cases.map((c, i) => (
             <div key={i} className="flex flex-col gap-6">
-              <div className="relative w-full h-[240px] md:h-[360px] rounded-md overflow-hidden shadow-sm">
-                <Image src={c.img} alt={c.title} fill className="object-cover" />
+              <div className="relative w-full h-[280px] md:h-[380px] rounded-lg overflow-hidden shadow-md">
+                <Image src={c.img} alt={c.title} fill className="object-cover transition-transform duration-500 hover:scale-105" />
               </div>
               <div>
-                <h4 className="text-xl font-bold text-gray-900 mb-4">{c.title}</h4>
-                <div className="w-12 h-0.5 bg-gray-200 mb-4"></div>
-                <p className="text-gray-700 leading-relaxed">
+                <h4 className="text-2xl font-bold text-brand-dark mb-4">{c.title}</h4>
+                <div className="w-16 h-[3px] bg-brand-primary mb-6"></div>
+                <p className="text-gray-700 leading-relaxed text-lg">
                   {c.desc}
                 </p>
               </div>
