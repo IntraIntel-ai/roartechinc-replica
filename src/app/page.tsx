@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import OurWork from "../components/OurWork";
 import Footer from "../components/Footer";
 import Image from "next/image";
 
@@ -64,8 +65,13 @@ export default function Home() {
           </div>
         </section>
 
+        {/* OUR WORK */}
+        <div id="work">
+          <OurWork />
+        </div>
+
         {/* WHO WE SERVE */}
-        <section id="work" className="py-20 px-6">
+        <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Who we serve</h2>
