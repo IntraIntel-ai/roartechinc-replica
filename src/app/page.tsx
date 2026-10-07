@@ -65,42 +65,75 @@ export default function Home() {
           <OurWork />
         </div>
 
-        <section className="py-24 px-6">
+        {/* WHO WE SERVE */}
+        <section className="py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-brand-dark mb-4">Who we serve</h2>
-              <div className="w-16 h-[3px] bg-brand-primary mx-auto"></div>
+              <h2 className="text-3xl font-semibold text-brand-dark mb-4">Who we serve</h2>
+              <div className="w-20 h-[2px] bg-brand-primary/50 mx-auto"></div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center text-center">
+            
+            {/* Logo Carousel Container */}
+            <div className="flex gap-4 justify-center md:justify-between items-center flex-wrap max-w-5xl mx-auto">
               {[
+                { name: "VA", img: "clients08.png" },
                 { name: "T&T Consulting", img: "clients01.png" },
                 { name: "US Marine", img: "clients02.png" },
                 { name: "DoS", img: "clients03.png" },
                 { name: "Dept of Education", img: "clients04.png" },
-                { name: "USAID", img: "clients05.png" },
-                { name: "GSA", img: "clients06.png" },
-                { name: "DOD USAF", img: "clients07.png" },
-                { name: "VA", img: "clients08.png" },
               ].map((client, i) => (
-                <div key={i} className="flex flex-col items-center justify-center p-4 group">
-                  <div className="relative w-32 h-32 mb-4">
-                    <Image src={`/images/${client.img}`} alt={client.name} fill className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" />
+                <div key={i} className="flex flex-col items-center justify-center p-4 w-40">
+                  <div className="relative w-28 h-28 mb-4">
+                    <Image src={`/images/${client.img}`} alt={client.name} fill className="object-contain" />
                   </div>
+                  <span className="text-gray-600 text-[15px] font-medium text-center">{client.name}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Pagination dots mimicking image */}
+            <div className="flex justify-center gap-3 mt-12">
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-500"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* WHY US */}
+        <section className="py-24 px-6 bg-brand-grayBg">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-semibold text-brand-dark mb-4">Why us</h2>
+            <div className="w-16 h-[2px] bg-brand-accent mx-auto mb-10"></div>
+            <p className="text-[17px] text-gray-600 leading-relaxed">
+              RoarTech brings expert advisory to the C-level to help them move to next generation technology. We build roadmaps, hire vendors, help with implementation, Program Management, and Governance, all within an organization’s budget and timeline. We integrate DevSecOps with cloud migration best practices that are tailored based on federal and commercial standards.
+            </p>
+          </div>
+        </section>
+
+        {/* CERTIFICATIONS */}
+        <section id="certifications" className="py-24 px-6 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h4 className="text-3xl font-bold text-brand-dark mb-4">Certifications</h4>
+              <div className="w-16 h-[3px] bg-brand-accent mx-auto"></div>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-12 items-center justify-items-center">
+              {[1, 2, 3, 4, 5, 6].map((num) => (
+                <div key={num} className="relative w-48 h-32">
+                  <Image src={`/images/certification0${num}.png`} alt={`Certification ${num}`} fill className="object-contain" />
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-brand-light">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-brand-dark mb-4">Why us</h2>
-            <div className="w-16 h-[3px] bg-brand-primary mx-auto mb-10"></div>
-            <p className="text-lg text-gray-700 leading-relaxed font-medium">
-              RoarTech brings expert advisory to the C-level to help them move to next generation technology. We build roadmaps, hire vendors, help with implementation, Program Management, and Governance, all within an organization’s budget and timeline. We integrate DevSecOps with cloud migration best practices that are tailored based on federal and commercial standards.
-            </p>
-          </div>
-        </section>
       </main>
       <Footer />
     </>
