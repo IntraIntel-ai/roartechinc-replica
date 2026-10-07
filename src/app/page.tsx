@@ -248,7 +248,7 @@ export default function Home() {
 
         {/* Footer Bottom */}
         <div className="max-w-[1240px] mx-auto px-6 pt-8 border-t border-gray-800 text-center text-gray-500">
-          <p>Copyright © {new Date().getFullYear()} RoarTech Inc.</p>
+          <p>Copyright © 2026 RoarTech Inc.</p>
         </div>
       </footer>
     </div>
