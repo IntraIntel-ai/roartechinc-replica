@@ -1,0 +1,30 @@
+# RoarTech Inc.
+
+RoarTech Inc. is a software development consulting firm specializing in Cloud Migration and Enterprise Governance, founded in 2014. 
+We integrate DevSecOps with cloud migration best practices tailored to federal and commercial standards.
+
+## Core Capabilities
+- Cloud Technology: AWS, Azure, GCP, and hybrid-multi-cloud solutions.
+- Next-Generation Data and Analytics: Machine learning (ML) and artificial intelligence (AI) data visualization.
+- Reporting and Metrics: Identifying strengths, weaknesses, and future possibilities for new software.
+- DevSecOps: CI/CD automation tools.
+- Enterprise Architecture: EA best practices and standards for secure cloud solutions.
+- Governance Regulatory and Compliance: End-to-end governance structures, process functions, standardization, and tech council.
+
+## Key Clients & Past Performance
+- Department of Veterans Affairs (VA)
+- T&T Consulting
+- US Marine Corps
+- Department of State (DoS)
+- Department of Education
+- USAID
+- General Services Administration (GSA)
+- DOD USAF
+
+## NAICS Codes
+541330, 541511, 541512, 541513, 541519, 541611, 541618
+
+## Contact Information
+- Location: Washington DC
+- Email: info@roartechinc.com
+- Phone: (703) 984-9981
