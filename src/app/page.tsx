@@ -96,37 +96,56 @@ export default function Home() {
         </section>
 
         {/* WHAT WE DO */}
-        <section className="py-20 px-6 bg-gray-50">
+        <section className="py-20 px-6 bg-white">
           <div className="max-w-[1240px] mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">What we do</h2>
-              <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
+            <div className="text-center mb-12">
+              <h4 className="text-2xl font-medium text-gray-900 mb-6">What we do</h4>
+              <div className="w-16 h-1 bg-gray-200 mx-auto"></div>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="flex gap-4 items-start">
-                <Cloud className="w-10 h-10 text-blue-600 shrink-0 mt-1" />
-                <p className="text-gray-700 text-lg"><strong className="text-gray-900">Cloud Technology</strong> – Our SMEs specialize in a variety of cloud technologies including AWS, Azure, GCP, and hybrid-multi-cloud solutions.</p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Column 1 */}
+              <div className="flex flex-col gap-6">
+                <div className="flex gap-4 items-start">
+                  <span className="shrink-0 w-4 h-4 mt-1 text-gray-800 fill-current">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+                  </span>
+                  <p className="text-gray-700 text-lg leading-relaxed"><strong className="text-gray-900">Cloud Technology</strong> – Our SMEs specialize in a variety of cloud technologies including AWS, Azure, GCP, and hybrid-multi-cloud solutions.</p>
+                </div>
+                <div className="flex gap-4 items-start">
+                  <span className="shrink-0 w-4 h-4 mt-1 text-gray-800 fill-current">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+                  </span>
+                  <p className="text-gray-700 text-lg leading-relaxed"><strong className="text-gray-900">Next-Generation Data and Analytics</strong> – We analyze digital, big data from various sources using machine learning (ML) and artificial intelligence (AI) data visualization tools.</p>
+                </div>
+                <div className="flex gap-4 items-start">
+                  <span className="shrink-0 w-4 h-4 mt-1 text-gray-800 fill-current">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+                  </span>
+                  <p className="text-gray-700 text-lg leading-relaxed"><strong className="text-gray-900">Reporting and Metrics</strong> – Our next-generation metrics and reporting capabilities make identifying strengths, weaknesses, and future possibilities for new software a breeze for our clients.</p>
+                </div>
               </div>
-              <div className="flex gap-4 items-start">
-                <Database className="w-10 h-10 text-blue-600 shrink-0 mt-1" />
-                <p className="text-gray-700 text-lg"><strong className="text-gray-900">Next-Generation Data and Analytics</strong> – We analyze digital, big data from various sources using machine learning (ML) and artificial intelligence (AI) data visualization tools.</p>
-              </div>
-              <div className="flex gap-4 items-start">
-                <BarChart className="w-10 h-10 text-blue-600 shrink-0 mt-1" />
-                <p className="text-gray-700 text-lg"><strong className="text-gray-900">Reporting and Metrics</strong> – Our next-generation metrics and reporting capabilities make identifying strengths, weaknesses, and future possibilities for new software a breeze for our clients.</p>
-              </div>
-              <div className="flex gap-4 items-start">
-                <ShieldCheck className="w-10 h-10 text-blue-600 shrink-0 mt-1" />
-                <p className="text-gray-700 text-lg"><strong className="text-gray-900">DevSecOps</strong> – We use CI/CD automation tools to ensure that our software solution is continuously up-to-date.</p>
-              </div>
-              <div className="flex gap-4 items-start">
-                <Server className="w-10 h-10 text-blue-600 shrink-0 mt-1" />
-                <p className="text-gray-700 text-lg"><strong className="text-gray-900">Enterprise Architecture</strong> – We leverage EA best practices and standards to plan, design, and implement secure cloud solutions in AWS, Azure, and Google cloud environments.</p>
-              </div>
-              <div className="flex gap-4 items-start">
-                <FileText className="w-10 h-10 text-blue-600 shrink-0 mt-1" />
-                <p className="text-gray-700 text-lg"><strong className="text-gray-900">Governance Regulatory and Compliance</strong> – We develop end-to-end governance structures through change management, process functions, standardization, and tech council to manage the different governance tasks across the board.</p>
+
+              {/* Column 2 */}
+              <div className="flex flex-col gap-6">
+                <div className="flex gap-4 items-start">
+                  <span className="shrink-0 w-4 h-4 mt-1 text-gray-800 fill-current">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+                  </span>
+                  <p className="text-gray-700 text-lg leading-relaxed"><strong className="text-gray-900">DevSecOps</strong> – We use CI/CD automation tools to ensure that our software solution is continuously up-to-date.</p>
+                </div>
+                <div className="flex gap-4 items-start">
+                  <span className="shrink-0 w-4 h-4 mt-1 text-gray-800 fill-current">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+                  </span>
+                  <p className="text-gray-700 text-lg leading-relaxed"><strong className="text-gray-900">Enterprise Architecture</strong> – We leverage EA best practices and standards to plan, design, and implement secure cloud solutions in AWS, Azure, and Google cloud environments.</p>
+                </div>
+                <div className="flex gap-4 items-start">
+                  <span className="shrink-0 w-4 h-4 mt-1 text-gray-800 fill-current">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+                  </span>
+                  <p className="text-gray-700 text-lg leading-relaxed"><strong className="text-gray-900">Governance Regulatory and Compliance</strong> – We develop end-to-end governance structures through change management, process functions, standardization, and tech council to manage the different governance tasks across the board.</p>
+                </div>
               </div>
             </div>
           </div>
