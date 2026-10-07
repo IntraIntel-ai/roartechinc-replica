@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RoarTech Inc. Website Replica
 
-## Getting Started
+This project is a high-performance, pixel-perfect replica of the RoarTech Inc. website. It has been modernized and rebuilt using **Next.js (App Router)**, **React 19**, and **Tailwind CSS v4**.
 
-First, run the development server:
+## 🚀 Features & Architecture
 
+### 1. Modern UI/UX Implementation
+- **Pixel-Perfect Styling:** Exact replication of the original Astra WordPress theme color palette (Dark Cyan `#005a7e` and Accent Green `#9ac93c`).
+- **Responsive Design:** Fluid layouts, flexbox/grid combinations, and mobile-first design patterns applied across all pages (`/services`, `/work`, `/certifications`, `/careers`, and Capability Statement brochures).
+- **Custom Fonts:** Integrated `next/font/google` with the Montserrat font family to eliminate cumulative layout shift (CLS).
+
+### 2. SaaS Development Best Practices
+Following strict organizational and industry standards:
+- **Cloud-Native & Portable (Rule 1.10):** 
+  - Configured Next.js `output: "standalone"` in `next.config.ts` to dramatically reduce container sizes.
+  - Implemented an optimized, multi-stage `Dockerfile` running as a non-root user (`nextjs:nodejs`) for high-security cloud deployments (GCP Cloud Run, AWS App Runner, K8s).
+- **CI/CD Pipeline:** 
+  - Integrated GitHub Actions (`.github/workflows/ci.yml`) for automated linting and build verification on every push and pull request to the `master` branch.
+- **Component Reusability:** 
+  - Extracted global UI fragments (Header, Footer, Clients Grid, Our Work) into modular components to adhere to DRY principles.
+
+### 3. SEO, AEO & Visibility Optimization
+- **Search Engine Optimization (SEO):** 
+  - Fully populated dynamic Metadata in `src/app/layout.tsx`, including OpenGraph protocols, Twitter Cards, and detailed crawler bot configurations.
+  - Generated programmatic `sitemap.ts` and `robots.ts` to guide search indexers effectively.
+- **AI Engine Optimization (AEO):** 
+  - Implemented `public/llms.txt`, providing a structured markdown reference tailored specifically for LLMs and AI agents crawling the site for context.
+- **Favicon & Assets:** Correctly configured site icons and optimized static PDFs within the `/public` directory.
+
+## 📁 Project Structure
+
+```text
+├── .github/workflows/   # CI/CD pipelines
+├── public/              # Static assets (images, pdfs, llms.txt)
+├── src/
+│   ├── app/             # Next.js App Router pages (Home, Services, Work, etc.)
+│   └── components/      # Reusable React components (Header, Footer, Clients, etc.)
+├── Dockerfile           # Multi-stage production container build
+├── next.config.ts       # Next.js configuration (Standalone mode)
+├── tailwind.config.ts   # (Deprecated in v4 - styles mapped to globals.css)
+└── package.json         # Dependencies & scripts
+```
+
+## 🛠️ Local Development
+
+First, install dependencies:
+```bash
+npm install
+```
+
+Run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Docker Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build the production Docker image:
+```bash
+docker build -t roartech-replica .
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run the containerized application:
+```bash
+docker run -p 3000:3000 roartech-replica
+```
